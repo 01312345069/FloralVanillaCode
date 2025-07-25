@@ -1,0 +1,531 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2.5rem;
+           
+            background-color: white;
+        }
+
+        nav a img {
+            height: 3rem;
+          
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .nav-links a {
+            color: #4b5563;
+           
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #000000;
+        }
+
+        .cart-link {
+            display: flex;
+            align-items: center;
+            color: #4b5563;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .cart-link:hover {
+            color: #000000;
+        }
+
+        .cart-link svg {
+            width: 1.5rem;
+            /* w-6 */
+            height: 1.5rem;
+            /* h-6 */
+            margin-right: 0.25rem;
+            /* mr-1 */
+        }
+
+        
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                gap: 1.5rem;
+            }
+        }
+
+        /* style for i3  */
+         .container3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* Vertically center content */
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .text-content,
+        .image-content {
+            width: 570px;
+            box-sizing: border-box;
+        }
+
+        .text-content h1 {
+            font-size: 2em;
+            margin: 0.2em 0;
+            line-height: 1.2;
+        }
+
+        .black-text {
+            color: black;
+        }
+
+        .orange-text {
+            color: orange;
+        }
+
+        .text-content p {
+            color: #333;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            max-height: 355px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 768px) {
+            .container3 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-content,
+            .image-content {
+                width: 100%;
+                max-width: 570px;
+            }
+
+            .image-content {
+                order: -1;
+                /* Show image first on mobile */
+            }
+
+            .container3 {
+                align-items: stretch;
+                /* Reset vertical alignment on mobile */
+            }
+        }
+
+        /* i4 code  */
+         .flower-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .flower-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .flower-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .flower {
+            /* border: 1px solid #ccc;  */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .flower-button {
+            background-color: #f97316;
+            /* Approx. Tailwind's orange-500 */
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            /* py-2 px-4 */
+            border: none;
+            cursor: pointer;
+            width: 62.5%;
+            transition: background-color 0.3s ease;
+        }
+
+        .flower-button:hover {
+            background-color: #c2410c;
+        }
+
+        .flower-p {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #0f0701;
+
+        }
+
+        .flower-h3 {
+            font-size: medium;
+        }
+
+        /* style for i5 */
+         .containerLover {
+            display: flex;
+            width: 1140px;
+            height: 597px;
+            margin: 0 auto;
+            gap: 60px;
+            padding: 80px;
+        }
+
+        .left-column {
+            position: relative;
+            width: 540px;
+            height: 597px;
+        }
+
+        .flower-image {
+            width: 540px;
+            height: 597px;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10%;
+            left: 100%;
+            /* position it right after the image ends */
+            transform: translate(-55%, -50%);
+            width: 286px;
+            height: 286px;
+            z-index: 10;
+        }
+
+        .badge img {
+            width: 70%;
+            height: auto;
+            padding: 28px;
+        }
+
+        .right-column {
+            width: 540px;
+            height: 521px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .right-column h2 {
+            font-size: 32px;
+            font-weight: bold;
+            height: 137px;
+            margin-bottom: 10px;
+        }
+
+        .right-column p {
+            font-size: 16px;
+            line-height: 1.5;
+            height: 108px;
+            margin-bottom: 5px;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .containerLover {
+                flex-direction: column;
+                width: 100%;
+                max-width: 361px;
+                height: auto;
+                gap: 20px;
+                padding: 10px;
+            }
+
+            .left-column {
+                width: 358px;
+                height: 396px;
+            }
+
+            .flower-image {
+                width: 358px;
+                height: 396px;
+            }
+
+            .badge {
+                display: none;
+                /* ✅ Hide the badge on mobile */
+            }
+
+            .right-column {
+                width: 361px;
+                height: 234px;
+            }
+
+            .right-column h2 {
+                font-size: 20px;
+                height: auto;
+            }
+
+            .right-column p {
+                font-size: 14px;
+                height: auto;
+                margin-bottom: 10px;
+            }
+        }
+        
+        /* style for i6 */
+          .deals-section {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .deals-section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .deals-section p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: #666;
+        }
+
+        .deals-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            grid-template-areas:
+                "card1 card3"
+                "card2 card3";
+        }
+
+        .card1 {
+            grid-area: card1;
+        }
+
+        .card2 {
+            grid-area: card2;
+        }
+
+        .card3 {
+            grid-area: card3;
+        }
+
+        .deal-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            min-height: 200px;
+        }
+
+        .deal-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .deal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            /* slight overlay */
+            padding: 20px;
+        }
+
+        .deal-overlay h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .deal-overlay a {
+            display: inline-block;
+            padding: 8px 14px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .deals-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "card1"
+                    "card2"
+                    "card3";
+            }
+        }
+
+        /* style for i7 */
+         .banner {
+            background-image: url('../images/news-letter-bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            /* padding-top: 15px; */
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .subscribe-form input[type="email"] {
+            flex: 1;
+            padding: 20px;
+            border: none;
+            font-size: 1rem;
+
+        }
+
+        .subscribe-form button {
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        .footer-col {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            color: #e95d5d;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .subscribe-form {
+                flex-direction: column;
+            }
+
+            .subscribe-form input,
+            .subscribe-form button {
+                width: 100%;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .footer-col {
+                margin: 20px 0;
+            }
+
+            .social-icons {
+                justify-content: left;
+            }
+        }
