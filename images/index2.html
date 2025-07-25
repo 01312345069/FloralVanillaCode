@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Assignment 2 Floral</title>
+</head>
+
+<body>
+    <nav class="flex items-center justify-between p-10 bg-white ">
+        <!-- Logo (Left) -->
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo" class="h-12" />
+        </a>
+
+        <!-- Right Side: Nav links + Cart -->
+        <div class="flex items-center space-x-6">
+            <!-- Navigation links (Hidden on mobile, shown on md+) -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-700 hover:text-black">Home</a>
+                <a href="#" class="text-gray-700 hover:text-black">Shop</a>
+                <a href="#" class="text-gray-700 hover:text-black">About Us</a>
+            </div>
+
+            <!-- Cart (Visible on all screen sizes) -->
+            <a href="#" class="flex items-center text-gray-700 hover:text-black">
+                <!-- Cart Icon SVG -->
+                <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 6h11a1 1 0 001-.8l1.5-5.2M7 13l1.5-6M6 21h.01M18 21h.01">
+                    </path>
+                </svg>
+                <span>Cart ($56)</span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>
